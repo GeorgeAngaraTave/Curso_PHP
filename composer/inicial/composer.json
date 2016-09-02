@@ -1,0 +1,8 @@
+{
+	"name": "PHP intermedio",
+	"require": {
+		"php": ">=5.2.4"
+	},
+	"require-dev": {
+	}
+}
