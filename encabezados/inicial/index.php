@@ -67,22 +67,22 @@ if( $action )
           <tbody>
             <tr>
               <td><a href="./index.php?action=redirect">Redirección</a></td>
-              <td>Location</td>
+              <td>Location: address</td>
               <td>Redirige a otra página</td>
             </tr>
             <tr>
               <td><a href="./index.php?action=render">Visualización</a></td>
-              <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
-              <td>Content Goes Here</td>
+              <td>Content-type: image/format</td>
+              <td>Muestra imagen</td>
             </tr>
             <tr>
               <td><a href="./index.php?action=parse">Interpretación</a></td>
-              <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
-              <td>Content Goes Here</td>
+              <td>Content-Type: application/format</td>
+              <td>Muestra con formato</td>
             </tr>
             <tr>
               <td><a href="./index.php?action=download">Descarga</a></td>
-              <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+              <td>Content-Type: application/format</td>
               <td>Content Goes Here</td>
             </tr>
           </tbody>
