@@ -8,8 +8,8 @@ if( $action === 'render' )
 
     header('Content-Type: image/jpeg');
 
-    $image = imagecreatefromjpeg($image_file);
-    imagejpeg($image, null, 100);
+    $image = file_get_contents($image_file);
+    echo $image;
 
 
     die('');
