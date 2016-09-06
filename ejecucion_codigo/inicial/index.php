@@ -1,40 +1,4 @@
-<?php
-$action = isset( $_GET['action'] ) ? $_GET['action'] : FALSE;
-
-if( $action )
-{
-    switch($action)
-    {
-        case 'redirect':
-
-            //Redirect to google
-            die('redirect');
-
-        break;
-        case 'render':
-
-            //Open image and display
-            die('render');
-
-        break;
-        case 'parse':
-
-            //Display in browser as XML
-            die('parse');
-
-        break;
-        case 'download':
-
-            //Force a download with octet stream
-            die('download');
-
-        break;
-        default:
-            //Do nothing
-    }
-}
-
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
     <meta charset="utf-8">
@@ -57,17 +21,17 @@ if( $action )
 
     <div class="callout primary">
       <h5>Eval</h5>
-      <pre><?php echo eval('var_dump($_SERVER);'); ?></pre>
+      <pre>var_dump</pre>
     </div>
 
     <div class="callout warning">
       <h5>Exec</h5>
-      <pre><?php echo exec('ps -fea ../'); ?></pre>
+      <pre></pre>
     </div>
 
     <div class="callout success">
       <h5>Operador de ejecución</h5>
-      <pre><?php echo `pwd`; ?></pre>
+      <pre>touch</pre>
     </div>
 
     <div class="row small-up-1 medium-up-2 large-up-3">
