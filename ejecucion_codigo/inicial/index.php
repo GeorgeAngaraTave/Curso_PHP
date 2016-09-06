@@ -62,7 +62,7 @@ if( $action )
 
     <div class="callout warning">
       <h5>Exec</h5>
-      <pre><?php echo exec('ls -alh ../'); ?></pre>
+      <pre><?php echo exec('ps -fea ../'); ?></pre>
     </div>
 
     <div class="callout success">
