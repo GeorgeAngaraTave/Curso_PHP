@@ -5,11 +5,19 @@ if( $action === 'render' )
 {
 
     $image_file = 'house.jpg';
+    $scale = 0.7;
 
     header('Content-Type: image/jpeg');
 
-    $image = file_get_contents($image_file);
-    echo $image;
+    list($original_width, $original_height) = getimagesize($image_file);
+    $new_width = $original_width * $scale;
+    $new_height = $original_height * $scale;
+
+    $image = imagecreatefromjpeg($image_file);
+    $new_image = imagescale ( $image , $new_width , $new_height);
+    $new_image = imagerotate ( $new_image , 90, 0);
+    imagestring($new_image, 5, 5, 5, 'Copyright Author', 255);
+    imagejpeg($new_image, null, 100);
 
 
     die('');
