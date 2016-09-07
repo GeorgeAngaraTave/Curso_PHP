@@ -5,17 +5,8 @@ if( $action === 'render' )
 {
 
     $start = microtime(true);
-    
-    for( $i = 0; $i < 50000; $i++ )
-    {
-        if(12345678901234567890 === 12345678901234567890 )
-        {
-            echo '<!--IGUAL<br/>-->';
-        }
-    }
 
     $end = microtime(true);
-    //imagejpeg($new_image, null, 100);
     $mem_usage = memory_get_peak_usage()/1024/1024;
     echo $mem_usage . ' MB<br/>';
     echo ($end-$start) . ' seconds';
