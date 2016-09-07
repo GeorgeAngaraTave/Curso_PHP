@@ -42,7 +42,7 @@ if( $action === 'render' )
         <div class="medium-5 large-3 columns"></div>
     </div>
     <div class="row column">
-        <p class="lead">Manejo de imágenes</p>
+        <p class="lead">Perfilado de scripts</p>
     </div>
     <div class="row small-up-1 medium-up-2 large-up-3">
 
