@@ -1,7 +1,7 @@
 <?php
-class OutputInterface
+interface OutputInterface
 {
-
+  
 }
 
 class ArrayOutput
@@ -9,21 +9,13 @@ class ArrayOutput
   
 }
 
-class JsonOutput
+class JsonOutput 
 {
   
 }
 
 class Client
 {
-  public function setOutputType($output_type)
-  {
-
-  }
-
-  public function loadOutputType()
-  {
-    
-  }
+  private $output;
 
 }
