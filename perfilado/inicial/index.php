@@ -4,11 +4,10 @@ $action = isset( $_GET['action'] ) ? $_GET['action'] : FALSE;
 if( $action === 'render' )
 {
 
-    $start = microtime(true);
-    $image_file = 'house_large.jpg';
+    $image_file = 'house.jpg';
     $scale = 0.7;
 
-    //header('Content-Type: image/jpeg');
+    header('Content-Type: image/jpeg');
 
     $image = imagecreatefromjpeg($image_file);
 
@@ -19,12 +18,7 @@ if( $action === 'render' )
     $new_image = imagerotate($new_image, 90, 0);
     imagestring($new_image, 5,5,5,'Copyright Author', 255);
 
-    //imagejpeg($new_image, null, 100);
-    $mem_usage = memory_get_peak_usage()/1024/1024;
-    $end = microtime(true);
-    echo $mem_usage .  ' MB<br/>';
-    echo ($end - $start) . ' seconds';
-
+    imagejpeg($new_image, null, 100);
 
     die('');
 
