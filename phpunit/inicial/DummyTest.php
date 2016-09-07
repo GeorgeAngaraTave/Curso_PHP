@@ -1,4 +1,4 @@
 <?php
-use PHPUnit\Framework\TestCase;
+require './vendor/autoload.php';
 
-class DummyTest extends TestCase{}
+class DummyTest extends PHPUnit_Framework_TestCase{}
