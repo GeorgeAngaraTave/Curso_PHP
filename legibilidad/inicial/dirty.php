@@ -8,7 +8,7 @@ function r(&$u)
   $cl_arr = [];
   foreach($u as $u_)
   {
-    if($u_['d'] == true)
+    if($u_['d'] == false)
     {
       
       $cl_arr[] = $u_;
