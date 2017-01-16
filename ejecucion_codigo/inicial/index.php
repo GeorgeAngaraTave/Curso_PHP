@@ -21,17 +21,17 @@
 
     <div class="callout primary">
       <h5>Eval</h5>
-      <pre>var_dump</pre>
+      <pre><?php echo eval('var_dump($_SERVER);');?></pre>
     </div>
 
     <div class="callout warning">
       <h5>Exec</h5>
-      <pre></pre>
+      <pre><?php echo exec('dir'); ?></pre>
     </div>
 
     <div class="callout success">
       <h5>Operador de ejecución</h5>
-      <pre>touch</pre>
+      <pre><?php echo `touch test.php`; ?></pre>
     </div>
 
     <div class="row small-up-1 medium-up-2 large-up-3">

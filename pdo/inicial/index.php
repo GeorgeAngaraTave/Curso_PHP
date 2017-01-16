@@ -1,3 +1,10 @@
+<?php 
+//$dsn = "mysql:host=localhost;dbname=intermediate_php;charset=utf8";
+$dsn = "sqlite:intermediate_php.sqlite";
+$pdo = new PDO($dsn,'root','');
+$stmt= $pdo->query('SELECT * FROM agents');
+
+?>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
@@ -28,10 +35,12 @@
             </tr>
           </thead>
           <tbody>
+          <?php foreach ($stmt as $row) {?>
             <tr>
-              <td>ID</td>
-              <td>Nombre</td>
+              <td><?php echo $row['id']?></td>
+              <td><?php echo $row['name']?></td>
             </tr>
+            <?php }?>
           </tbody>
         </table>
 

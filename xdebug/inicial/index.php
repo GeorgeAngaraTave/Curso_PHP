@@ -79,12 +79,12 @@ if( !empty($action) )
           </thead>
           <tbody>
             <tr>
-              <td><a href="./index.php?action= redirect">Redirección</a></td>
+              <td><a href="./index.php?action=redirect">Redirección</a></td>
               <td>Location: address</td>
               <td>Redirige a otra página</td>
             </tr>
             <tr>
-              <td><a href="./index.php?action=render,">Visualización</a></td>
+              <td><a href="./index.php?action=render">Visualización</a></td>
               <td>Content-type: image/format</td>
               <td>Muestra imagen</td>
             </tr>

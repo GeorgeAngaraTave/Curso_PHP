@@ -8,9 +8,10 @@ if( $action === 'render' )
 
     header('Content-Type: image/jpeg');
 
-    $image = file_get_contents($image_file);
-    echo $image;
-
+    //$image = file_get_contents($image_file);
+   // echo $image;
+    $image = imagecreatefromjpeg($image_file);
+    imagejpeg($image);
 
     die('');
 

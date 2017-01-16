@@ -21,7 +21,7 @@
 
     <div class="callout primary">
       <h5>ENV</h5>
-      <pre>var_dump</pre>
+      <pre><?php var_dump($_ENV)?></pre>
     </div>
 
     <div class="row small-up-1 medium-up-2 large-up-3">

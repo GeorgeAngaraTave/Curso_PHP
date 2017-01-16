@@ -1,3 +1,19 @@
+<?php  
+require 'vendor/autoload.php';
+use GuzzleHttp\Client;
+
+$client = new GuzzleHttp\Client(['base_uri' => 'https://api.github.com/']);
+
+$response = $client->request('GET', 'users');
+//echo $response->getStatusCode();
+// print_r($response->getHeader('content-type'));
+$contents = $response->getBody()->getContents();
+
+//echo '<pre>';
+//print_r($contents);
+$content_json = json_decode($contents, TRUE);
+?>
+
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
@@ -28,10 +44,12 @@
             </tr>
           </thead>
           <tbody>
+          <?php foreach ($content_json as $users){?>
             <tr>
-              <td>nombre</td>
-              <td></td>
+              <td><?php echo $users['login'] ?></td>
+              <td><img src="<?php echo $users['avatar_url']; ?>"></td>
             </tr>
+            <?php }?>
           </tbody>
         </table>
 
